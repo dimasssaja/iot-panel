@@ -19,13 +19,13 @@ class UsersTableSeeder extends Seeder
         $faker = Faker::create();
 
         // Insert a default user
-        DB::table('users')->insert([
-            'name' => 'Administrator',
-            'email' => 'admin@gmail.com',
-            'password' => Hash::make('admin123'),
-        ]);
+        // DB::table('users')->insert([
+        //     'name' => 'Administrator',
+        //     'email' => 'admin@gmail.com',
+        //     'password' => Hash::make('admin123'),
+        // ]);
 
         // Insert multiple random users using the factory
-        \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(100)->create();
     }
 }
